@@ -1,0 +1,262 @@
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/*
+  2. Remove default margin
+*/
+* {
+  margin: 0;
+}
+/*
+  Typographic tweaks!
+  3. Add accessible line-height
+  4. Improve text rendering
+*/
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+/*
+  5. Improve media defaults
+*/
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+/*
+  6. Remove built-in form typography styles
+*/
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+/*
+  7. Avoid text overflows
+*/
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+/*
+  8. Create a root stacking context
+*/
+#root,
+#__next {
+  isolation: isolate;
+}
+
+/* ROOT VAR */
+
+:root {
+  --primary: #5a67df;
+  --secondary: #bcbbeb;
+  --white: #f9f9f9;
+  --grey: #ababab;
+}
+
+/* GENERAL */
+
+/* Utility */
+
+.sr-only {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+/* Grid */
+
+.container {
+  max-width: 56.25rem;
+  height: 100%;
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Bg Color */
+
+.bgPrimary {
+  background-color: var(--primary);
+  color: var(--secondary);
+}
+
+.bgPrimary strong,
+.bgPrimary h1,
+.bgPrimary h2,
+.bgPrimary h3,
+.bgPrimary h4,
+.bgPrimary h5,
+.bgPrimary h6 {
+  color: var(--white);
+}
+
+.bgLight {
+  background-color: var(--white);
+  color: var(--grey);
+}
+
+.bgLight strong,
+.bgLight h1,
+.bgLight h2,
+.bgLight h3,
+.bgLight h4,
+.bgLight h5,
+.bgLight h6 {
+  color: var(--primary);
+}
+
+/* Text */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "DM Serif Display", serif;
+  margin-bottom: 3rem;
+}
+
+* {
+  font-family: "DM Sans", sans-serif;
+}
+
+strong {
+  font-family: "DM Serif Display", serif;
+}
+
+* :not(p) {
+  line-height: 1.2;
+}
+
+p {
+  line-height: 1.4;
+  font-size: 1.125rem;
+}
+
+.title {
+  font-size: 3rem;
+}
+
+/* Button */
+
+.button {
+  padding: 0.5rem 2.5rem;
+  display: inline-block;
+  font-family: DM Serif Display;
+  font-size: 1.5rem;
+  text-decoration: none;
+  border-radius: 0.25rem;
+}
+
+.buttonPrimary {
+  background-color: var(--white);
+  color: var(--primary);
+}
+
+/* Sections */
+
+section {
+  padding: 7rem;
+}
+
+/* HOME PAGE */
+
+/* Header */
+
+header {
+  height: 100vh;
+  padding: 3rem;
+}
+
+header .container {
+  justify-content: space-between;
+}
+
+header figure img {
+  max-width: 10rem;
+  margin-inline: auto;
+}
+
+header blockquote {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Project Presentation */
+
+.presentationSlider {
+  margin-top: 4rem;
+  display: flex;
+  align-items: first baseline;
+  gap: 1.5rem;
+}
+
+.presentationSlider > * {
+  flex: 1;
+}
+
+.presentationSlider img {
+  transform: scale(0.7);
+  margin-inline: auto;
+}
+
+.presentationItemDescription {
+  font-family: "DM Serif Display", serif;
+  font-size: 0.9rem;
+  text-align: center;
+  color: var(--primary);
+}
+
+/* Services */
+
+#services .button {
+  margin-block: 2rem;
+}
+
+#online {
+  display: flex;
+  gap: 0.5rem;
+}
+
+#services hr {
+  margin-block: 6rem;
+  border: .125rem solid var(--white);
+  opacity: .1;
+}
+
+/* About Us */
+
+#aboutUs span {
+  display: block;
+  margin-bottom: 2rem;
+}
+
+#aboutUs span h3,
+#aboutUs span p{
+  display: inline;
+}
+
+#aboutUs span h3 {
+  font-size: 1.75rem;
+}
