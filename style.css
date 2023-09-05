@@ -60,6 +60,16 @@ h6 {
 #__next {
   isolation: isolate;
 }
+/* 9. Reset a style */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+/* 10. Ul reset */
+ul {
+  padding: 0;
+  list-style: none;
+}
 
 /* ROOT VAR */
 
@@ -68,9 +78,16 @@ h6 {
   --secondary: #bcbbeb;
   --white: #f9f9f9;
   --grey: #ababab;
+  --dark: #2f2e41;
 }
 
 /* GENERAL */
+
+/* Overflow */
+
+body {
+  overflow-x: hidden;
+}
 
 /* Utility */
 
@@ -81,6 +98,10 @@ h6 {
   width: 1px;
   height: 1px;
   overflow: hidden;
+}
+
+.hide {
+  display: none !important;
 }
 
 /* Grid */
@@ -125,6 +146,11 @@ h6 {
   color: var(--primary);
 }
 
+.bgDark {
+  background-color: var(--dark);
+  color: var(--white);
+}
+
 /* Text */
 
 h1,
@@ -134,6 +160,7 @@ h4,
 h5,
 h6 {
   font-family: "DM Serif Display", serif;
+  font-weight: 400;
   margin-bottom: 3rem;
 }
 
@@ -143,6 +170,7 @@ h6 {
 
 strong {
   font-family: "DM Serif Display", serif;
+  font-weight: 400;
 }
 
 * :not(p) {
@@ -167,11 +195,36 @@ p {
   font-size: 1.5rem;
   text-decoration: none;
   border-radius: 0.25rem;
+  transition: 0.4s;
+}
+
+.button:hover {
+  opacity: 0.5;
 }
 
 .buttonPrimary {
   background-color: var(--white);
   color: var(--primary);
+}
+
+.buttonSecondary {
+  background-color: var(--primary);
+  color: var(--white);
+}
+
+.buttonLink {
+  margin-block: 1.5rem;
+  color: var(--secondary);
+  text-decoration: underline;
+  transition: 0.4s;
+}
+
+.buttonLink:hover {
+  color: var(--primary);
+}
+
+button {
+  cursor: pointer;
 }
 
 /* Sections */
@@ -180,16 +233,35 @@ section {
   padding: 7rem;
 }
 
+/* Divider */
+
+.divider {
+  margin-block: 6rem;
+  border: 0.125rem solid;
+  opacity: 0.1;
+}
+
+.dividerOnPrimary {
+  color: var(--white);
+}
+
+.dividerOnLight {
+  color: var(--primary);
+}
+
 /* HOME PAGE */
 
 /* Header */
 
 header {
-  height: 100vh;
   padding: 3rem;
 }
 
-header .container {
+header#homePage {
+  height: 100vh;
+}
+
+header#homePage .container {
   justify-content: space-between;
 }
 
@@ -198,7 +270,7 @@ header figure img {
   margin-inline: auto;
 }
 
-header blockquote {
+header#homePage blockquote {
   font-size: 2.5rem;
   margin-bottom: 1.5rem;
 }
@@ -223,6 +295,7 @@ header blockquote {
 
 .presentationItemDescription {
   font-family: "DM Serif Display", serif;
+  font-weight: 400;
   font-size: 0.9rem;
   text-align: center;
   color: var(--primary);
@@ -234,15 +307,43 @@ header blockquote {
   margin-block: 2rem;
 }
 
+#services p,
+#services h3,
+#services .button {
+  position: relative;
+  z-index: 999;
+}
+
 #online {
   display: flex;
   gap: 0.5rem;
 }
 
-#services hr {
-  margin-block: 6rem;
-  border: .125rem solid var(--white);
-  opacity: .1;
+#consulenzaSessuale,
+#eduCare {
+  max-width: 34rem;
+  position: relative;
+}
+
+#consulenzaSessuale::before,
+#eduCare::before {
+  content: "";
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 0;
+  padding-top: 66.64%;
+  position: absolute;
+  top: 98px;
+  right: -546px;
+}
+
+#consulenzaSessuale::before {
+  background-image: url(asset/consulenzaSessualeIllustration.png);
+}
+
+#eduCare::before {
+  background-image: url(asset/eduCareIllustration.png);
 }
 
 /* About Us */
@@ -253,10 +354,247 @@ header blockquote {
 }
 
 #aboutUs span h3,
-#aboutUs span p{
+#aboutUs span p {
   display: inline;
 }
 
 #aboutUs span h3 {
   font-size: 1.75rem;
+}
+
+#aboutUs img {
+  margin-bottom: 2rem;
+}
+
+#aboutUs .container > div {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Services */
+
+#headerServices {
+  background: var(--primary);
+}
+
+#headerServices h1 {
+  font-size: 5rem;
+  margin-top: 5rem;
+}
+
+.servicesSubheader {
+  width: 100%;
+  fill: var(--primary);
+  background: var(--white);
+}
+
+#mainServices h2 {
+  font-size: 2.5rem;
+}
+
+#mainServices .container > h2 {
+  margin-top: 7rem;
+}
+
+#mainServices ul li {
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+}
+
+#mainServices ul li::before {
+  content: url(asset/servicesUlIcon.png);
+}
+
+.pricingSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 7rem;
+}
+
+.pricingSection h2 {
+  width: 100%;
+}
+
+.pricingSection .pricingSelectors {
+  border-radius: 3.5625rem;
+  border: 3px solid var(--Primary, #5a67df);
+  padding: 0.5rem;
+}
+
+.pricingSection .pricingSelectors button {
+  border-radius: 3.4375rem;
+  border-color: transparent;
+  padding: 0.3rem 1.5rem;
+  background: var(--white);
+}
+
+.pricingSection .pricingSelectors button.active {
+  background: var(--secondary);
+}
+
+.pricingSection .pricing {
+  display: flex;
+  gap: 2rem;
+  margin-block: 3rem;
+}
+
+.pricingSection .pricing > div {
+  padding: 2rem 3.5rem;
+  border-radius: 0.25rem;
+  border: 3px solid var(--Primary, #5a67df);
+}
+
+.pricingSection .packTitle {
+  font-size: 1.8rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.pricingSection .price {
+  font-size: 1.3rem;
+  color: var(--primary);
+}
+
+.pricingSection .price strong {
+  font-size: 4rem;
+}
+
+.pricingSection span {
+  font-size: 0.8rem;
+  margin-top: 1rem;
+  text-align: center;
+  max-width: 22rem;
+}
+
+/* Footer */
+
+footer {
+  padding-block: 4rem;
+}
+
+footer .container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+footer .logo {
+  max-width: 10rem;
+}
+
+footer .container ul {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-column-gap: 3rem;
+  grid-row-gap: 1rem;
+  grid-template-areas:
+    "phone address"
+    "mail social";
+}
+
+footer .phone {
+  grid-area: phone;
+}
+
+footer .mail {
+  grid-area: mail;
+}
+
+footer .address {
+  grid-area: address;
+}
+
+footer .social {
+  grid-area: social;
+}
+
+footer .container ul li {
+  display: flex;
+  gap: 0.5rem;
+}
+
+/* MEDIA QUERY */
+
+@media (max-width: 900px) {
+  .button {
+    width: 100%;
+    text-align: center;
+  }
+
+  .divider {
+    margin-block: 4rem;
+  }
+
+  header blockquote {
+    font-size: 1.7rem;
+  }
+
+  section {
+    padding: 8%;
+  }
+
+  .presentationSlider {
+    flex-wrap: wrap;
+    width: 80%;
+    margin-inline: auto;
+  }
+
+  #consulenzaSessuale::before,
+  #eduCare::before {
+    display: none;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  #consulenzaSessuale,
+  #eduCare {
+    max-width: 56.25rem;
+  }
+
+  #aboutUs img {
+    height: 10rem;
+    margin-inline: auto;
+  }
+
+  footer .container {
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  footer .container ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  #headerServices h1 {
+    font-size: 3rem;
+  }
+
+  .pricingSection .pricing {
+    flex-direction: column;
+  }
+
+  .pricingSection .pricing > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 500px) {
+  section {
+    padding: 5%;
+  }
+
+  .presentationSlider {
+    flex-direction: column;
+    align-items: center;
+    width: 16rem;
+  }
 }

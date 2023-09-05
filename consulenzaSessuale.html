@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz@9..40&family=DM+Serif+Display&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="asset/favicon_io/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="asset/favicon_io/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="asset/favicon_io/favicon-16x16.png"
+    />
+    <link rel="manifest" href="asset/favicon:io/site.webmanifest" />
+    <title>SECS - Servizi e Consulenza Sessuologica</title>
+  </head>
+  <body>
+    <header id="headerServices" class="bgPrimary">
+      <div class="container">
+        <a href="index.html">
+          <figure><img src="asset/secsLogo_w.png" alt="SECS Logo" /></figure>
+        </a>
+        <h1 class="title">Consulenza sessuale</h1>
+      </div>
+    </header>
+    <svg
+      class="servicesSubheader"
+      xmlns="http://www.w3.org/2000/svg"
+      version="1.1"
+      viewBox="0 0 1440 200"
+    >
+      <path d="M 0,0 1440,0 1440,200 z""></path>
+    </svg>
+    <main id="mainServices">
+      <section id="serviceDetails" class="bgLight">
+        <div class="container">
+          <p>
+            La consulenza sessuale si basa principalmente sulla
+            <strong>consapevolezza di sé</strong>, <strong>dell’altrə</strong> e
+            di sé tramite l’altrə, del proprio piacere, delle proprie emozioni e
+            la conoscenza del piacere della relazione e dell’intimità.
+          </p>
+          <h2>Di cosa parleremo?</h2>
+          <p>
+            Vengono trattate tematiche legate al mondo
+            <strong>LGBTQIA+/GSRD</strong> come ad esempio: temi legati agli
+            <strong>orientamenti sessuali</strong> e alle
+            <strong> identità di genere </strong> e
+            <strong>si dà spazio alle difficoltà</strong> relative a stigma,
+            stereotipi, discriminazioni multiple, microaggressioni e
+            pregiudizi.<br /><br />Ci si avvicina alle preoccupazioni e alle
+            difficoltà legate alle <strong> prime esperienze </strong>, alle
+            <strong>esperienze traumatiche</strong>, alle paure e alle
+            <strong> fobie sessuali </strong>.<br /><br />Inoltre, si prendono
+            in carico persone con <strong>dipendenze affettive</strong> e/o
+            <strong>sessuali</strong>, <strong>parafilie</strong>, e
+            <strong>comportamenti</strong>/<strong>
+              desideri vissuti con disagio
+            </strong>
+            e dolore.<br /><br />Un aspetto che abbiamo molto a cuore è legato
+            alla <strong>scoperta del proprio corpo</strong> e del rapporto con
+            esso in <strong>persone con disabilità mentali e/o fisiche</strong>,
+            la <strong>scoperta del piacere</strong> e del desiderio che
+            caratterizza ognunə di noi.<br /><br />Vengono trattati temi
+            riguardanti le <strong>relazioni non monogame</strong> consensuali e
+            le relative dinamiche e/o difficoltà.
+          </p>
+          <h2>Principali disfunzioni affrontabili con la Terapia Sessuale</h2>
+          <ul>
+            <li><p>Eiaculazione ritardata</p></li>
+            <li><p>Disturbo erettile</p></li>
+            <li><p>Disturbo dell’orgasmo femminile</p></li>
+            <li>
+              <p>
+                Disturbo del desiderio sessuale e dell’eccitazione sessuale
+                femminile
+              </p>
+            </li>
+            <li>
+              <p>Disturbo del dolore genito-pelvico e della penetrazione</p>
+            </li>
+            <li><p>Disturbo del desiderio sessuale ipoattivo maschile</p></li>
+            <li><p>Eiaculazione precoce</p></li>
+            <li><p>Disfunzione sessuale indotte da sostanze/farmaci</p></li>
+          </ul>
+          <div class="pricingSection">
+            <h2 class="title">Info e costi</h2>
+            <div class="pricingSelectors">
+              <button
+                id="pricingSelector1"
+                class="active"
+                onclick="consulenzaPack()"
+              >
+                <p><strong>Consulenza</strong></p>
+              </button>
+              <button id="pricingSelector2" onclick="terapiaPack()">
+                <p><strong>Psicoterapia</strong></p>
+              </button>
+            </div>
+            <div class="pricing">
+              <div id="pack1">
+                <figure>
+                  <img src="asset/individualSession.png" alt="" />
+                </figure>
+                <h3 class="packTitle">Seduta individuale</h3>
+                <p class="price">€ <strong>55</strong></p>
+              </div>
+              <div id="pack2">
+                <figure><img src="asset/groupSession.png" alt="" /></figure>
+                <h3 class="packTitle">Seduta non individuale</h3>
+                <p class="price">€ <strong>80</strong></p>
+              </div>
+              <div id="pack3" class="hide">
+                <figure>
+                  <img src="asset/individualSession.png" alt="" />
+                </figure>
+                <h3 class="packTitle">Seduta individuale</h3>
+                <p class="price">€ <strong>70</strong></p>
+              </div>
+              <div id="pack4" class="hide">
+                <figure><img src="asset/groupSession.png" alt="" /></figure>
+                <h3 class="packTitle">Seduta non individuale</h3>
+                <p class="price">€ <strong>95</strong></p>
+              </div>
+            </div>
+            <a
+              href="mailto:info@sessuologiainclusiva.it"
+              class="button buttonSecondary"
+              >Contattaci</a
+            >
+            <span
+              >Il costo relativo ad altre tipologie di terapie/consulenze verrà
+              fornito nel momento della richiesta degli interessati</span
+            >
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="bgDark">
+      <div class="container">
+        <figure>
+          <img src="asset/secsLogo_w.png" alt="SECS Logo" class="logo" />
+        </figure>
+        <ul>
+          <a href="tel:+393286326119" class="phone">
+            <li>
+              <figure><img src="asset/footerPhone.png" alt="Phone" /></figure>
+              <p>+39 328 6326119</p>
+            </li>
+          </a>
+          <a href="mailto:info@sessuologiainclusiva.it" class="mail">
+            <li>
+              <figure><img src="asset/footerMail.png" alt="Email" /></figure>
+              <p>info@sessuologiainclusiva.it</p>
+            </li>
+          </a>
+          <a href="https://goo.gl/maps/XdVJjtQnvxrP9rbB7">
+            <li class="address">
+              <figure>
+                <img src="asset/footerLocation.png" alt="Location" />
+              </figure>
+              <p>Via Conca del Naviglio 5, Milano 20123</p>
+            </li>
+          </a>
+          <a
+            href="https://www.instagram.com/sessuologiainclusiva_secs/"
+            class="social"
+          >
+            <li>
+              <figure><img src="asset/footerIG.png" alt="Instagram" /></figure>
+              <p><strong>← Seguici su instagram</strong></p>
+            </li>
+          </a>
+        </ul>
+      </div>
+    </footer>
+    <script src="functions.js"></script>
+  </body>
+</html>
