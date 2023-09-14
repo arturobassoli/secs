@@ -217,6 +217,9 @@ p {
   color: var(--secondary);
   text-decoration: underline;
   transition: 0.4s;
+  background: none;
+  border: none;
+  display: inherit;
 }
 
 .buttonLink:hover {
@@ -396,26 +399,26 @@ header#homePage blockquote {
   display: flex;
 }
 
-.breadcrumb .container ul li{
+.breadcrumb .container ul li {
   display: flex;
   align-items: center;
 }
 
-.breadcrumb .container ul li a{
+.breadcrumb .container ul li a {
   text-decoration: underline;
 }
 
-.breadcrumb .container ul li a:hover{
+.breadcrumb .container ul li a:hover {
   color: var(--primary);
 }
 
-.breadcrumb .container ul li+li:before {
-  padding: .5rem;
+.breadcrumb .container ul li + li:before {
+  padding: 0.5rem;
   content: "/\00a0";
 }
 
 .breadcrumb .container ul li:first-child::before {
-  padding: .5rem;
+  padding: 0.5rem;
   content: "\2190";
 }
 
