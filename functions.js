@@ -15,6 +15,9 @@ const ilDipiuGiulia = document.getElementById("ilDipiuGiulia");
 const leggiDiPiuFra = document.getElementById("leggiDiPiuFra");
 const leggiDiMenoFra = document.getElementById("leggiDiMenoFra");
 const ilDipiuFra = document.getElementById("ilDipiuFra");
+const leggiDiPiuCla = document.getElementById("leggiDiPiuCla");
+const leggiDiMenoCla = document.getElementById("leggiDiMenoCla");
+const ilDipiuCla = document.getElementById("ilDipiuCla");
 
 /* Pricing Functions */
 
@@ -59,4 +62,16 @@ function aboutFraHide() {
   ilDipiuFra.classList.add("hide");
   leggiDiMenoFra.classList.add("hide");
   leggiDiPiuFra.classList.remove("hide");
+}
+
+function aboutClaShow() {
+  ilDipiuCla.classList.remove("hide");
+  leggiDiMenoCla.classList.remove("hide");
+  leggiDiPiuCla.classList.add("hide");
+}
+
+function aboutClaHide() {
+  ilDipiuCla.classList.add("hide");
+  leggiDiMenoCla.classList.add("hide");
+  leggiDiPiuCla.classList.remove("hide");
 }

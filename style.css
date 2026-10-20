@@ -320,6 +320,8 @@ header#homePage blockquote {
 #online {
   display: flex;
   gap: 0.5rem;
+  font-size: 1.5rem;
+  align-items: center;
 }
 
 #consulenzaSessuale,
@@ -367,6 +369,7 @@ header#homePage blockquote {
 
 #aboutUs img {
   margin-bottom: 2rem;
+  max-width: 18rem;
 }
 
 #aboutUs .container > div {
@@ -430,14 +433,31 @@ header#homePage blockquote {
   margin-top: 7rem;
 }
 
-#mainServices ul li {
+.flag {
+  display: flex;
+  gap: 1rem;
+}
+
+.flag img {
+  max-width: 3rem;
+}
+
+.flag strong {
+  font-size: 1.5rem;
+}
+
+ul.list li {
   display: flex;
   align-items: baseline;
   gap: 1rem;
 }
 
-#mainServices ul li::before {
+ul.list li::before {
   content: url(asset/servicesUlIcon.png);
+}
+
+#ilDipiuCla ul.list {
+  padding-block: 1rem 2rem;
 }
 
 .pricingSection {
@@ -495,6 +515,10 @@ header#homePage blockquote {
   font-size: 4rem;
 }
 
+.pricingSection .discount strong {
+  font-size: 1.8rem;
+}
+
 .pricingSection span {
   font-size: 0.8rem;
   margin-top: 1rem;
@@ -548,6 +572,10 @@ footer .social {
 footer .container ul li {
   display: flex;
   gap: 0.5rem;
+}
+
+footer a:hover {
+  opacity: .5;
 }
 
 /* MEDIA QUERY */
